@@ -1,26 +1,38 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const body = document.body;
-    const header = document.querySelector('header');
+function logo() {
+    window.location.reload();
+}
 
-    function handleScroll() {
-        if (window.scrollY > 750) {
-            body.classList.add('background-gray');
-            body.classList.remove('background-dark');
-            header.classList.remove('background-dark');
-        } else if (window.scrollY > 400) {
-            body.classList.add('background-dark');
-            body.classList.remove('background-gray');
-            header.classList.add('background-dark');
-        } else {
-            body.classList.remove('background-dark');
-            body.classList.remove('background-gray');
-            header.classList.remove('background-dark');
-        }
+const mainElement = document.querySelector('main');
+const headerElement = document.querySelector('header');
+const scrollApply = 600;
+const scrollRemove = 1600;
+const scrollApplyAgain = 2500;
+const scrollRemoveAgain = 7700;
+
+document.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY || window.pageYOffset;
+    mainElement.classList.remove('main-background-change', 'main-background-revert');
+    if (scrollPosition >= scrollRemoveAgain) {
+        mainElement.classList.add('main-background-revert');
+    } else if (scrollPosition >= scrollApplyAgain) {
+        mainElement.classList.add('main-background-change');
+    } else if (scrollPosition >= scrollRemove) {
+        mainElement.classList.add('main-background-revert');
+    } else if (scrollPosition >= scrollApply) {
+        mainElement.classList.add('main-background-change');
     }
 
-    window.addEventListener('scroll', handleScroll);
+    headerElement.classList.remove('header-background-change', 'header-background-revert');
+    if (scrollPosition >= scrollRemoveAgain) {
+        headerElement.classList.add('header-background-revert');
+    } else if (scrollPosition >= scrollApplyAgain) {
+        headerElement.classList.add('header-background-change');
+    } else if (scrollPosition >= scrollRemove) {
+        headerElement.classList.add('header-background-revert');
+    } else if (scrollPosition >= scrollApply) {
+        headerElement.classList.add('header-background-change');
+    }
 });
-
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.header-right a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -34,17 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-function logo() {
-    window.location.reload();
-}
-
 function GoToContact() {
     const contentElement = document.getElementById('contact');
     contentElement.scrollIntoView({behavior: 'smooth'});
 }
-
 function scrollToContent() {
     const contentElement = document.getElementById('body');
     contentElement.scrollIntoView({ behavior: 'smooth' });
 }
+
