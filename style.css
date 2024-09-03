@@ -3,6 +3,13 @@ body {
     margin: 0;
     height: 100%;
     transition: background-color 1s ease, color 1s ease;
+    scroll-behavior: smooth;
+    overflow: auto;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow: auto;
 }
 
 .background-dark{
@@ -268,7 +275,7 @@ section::after {
     font-family: "poppins", sans-serif; 
     line-height: 1.5;
     max-width: 570px;
-    text-align: left;
+    text-align: justify;
     animation: slideInFromBottom  1s ease-in-out 2.6s forwards;
     opacity: 0;
 }
@@ -409,6 +416,7 @@ main {
 
 .description{
     position: relative;
+    text-align: justify;
 }
 
 .description h1{
@@ -517,6 +525,7 @@ main {
     font-family: "poppins",sans-serif;
     margin: 0;
     padding: 0;
+    text-align: justify;
 }
 
 .about-content p a{
@@ -613,6 +622,8 @@ main {
     font-size: 20.8px;
     color: rgba(0, 0, 0, 0.685);
     line-height: 1.6;
+    text-align: justify;
+
 }
 
 .skill-info h2,p{
@@ -784,6 +795,7 @@ main {
     font-size: 17.6px;
     margin-top: 10px;
     line-height: 1.5;
+    text-align: justify;
 }
 
 .project-grid > div:nth-child(1) {
@@ -1036,57 +1048,6 @@ main {
     box-shadow: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .cartoon-image img {
     grid-column: 4; 
     grid-row: 1 / 4; 
@@ -1206,13 +1167,40 @@ main {
     padding: 0px 12px;
     margin: 0;
 }
-
-  .copy-rights p{
+.copy-rights p{
     font-size: 18px;
     font-family: 'grotesk', sans-serif;
-  }
+    text-align: center;
+    margin: 0;
+}
 
-  .copy-rights span{
+.back-to-top {
+    display: flex;
+    align-items: center;
+    height: auto;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.back-to-top span {
+    margin-right:20px;
     font-size: 20px;
-    font-family: 'grotesk', sans-serif;
-  }
+}
+
+.back-to-top img {
+    width: 20px; 
+    height: auto; 
+    animation: bounce 0.7s ease-out infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-5px); /* Start position */
+    }
+    50% {
+        transform: translateY(0px); /* Bounce up */
+    }
+    100% {
+        transform: translateY(-5px); /* Settle back to start position */
+    }
+}

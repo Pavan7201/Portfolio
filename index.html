@@ -7,25 +7,24 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
+<body id="body">
     <header>
         <div class="header-left">
-            <button>Pavan</button>
+            <button onclick="logo()">Pavan</button>
         </div>
         <div class="header-right">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <button>Let's Talk</button>
+            <button onclick="GoToContact()">Let's Talk</button>
         </div>    
     </header>
     <section>
-        <div class="content">
+        <div class="content" >
             <h1>Pavan 👋</h1>
             <div class="line-container">
                 <span>Frontend Developer</span>
@@ -41,13 +40,13 @@
             <img src="./assets/Zenitsu.png" alt="Zenitsu image">
         </div>
     </section>
-    <main>
+    <main id="about">
         <div class="description">
             <h1>
                 <span>I'm a</span> Frontend Developer <span> Who loves</span> to create awesome, big-scale app <span>with</span> smooth user interactions.          
             </h1>
         </div>
-        <section class="about-section">
+        <section class="about-section" >
             <div class="about-heading">
                 <div class="line"></div>
                 <h1>ABOUT ME</h1>
@@ -59,12 +58,12 @@
                     <h2>A brief into about me</h2>
                     <p>Hello there! 👋 I began my career at 19 as an Electrical Engineer, but my true passion lies in Frontend Development. I’m now on an exciting journey to explore and master cutting-edge technologies, blending my engineering background with a deep interest in creating engaging and innovative web experiences.</p>
                     <p>My coding adventure began in the midst of 2021, where I started with Python, aced it, and then dived into web development. Now, I‘m exploring the awesome world of Frontend Development. 🚀</p>
-                    <p>I‘m all about learning, growing, and turning cool ideas into digital reality. Join me on this journey, and let‘s make some tech magic together! ✨ connect through
+                    <p>I‘m all about learning, growing, and turning cool ideas into digital reality. Join me on this journey, and let‘s make some tech magic together!✨connect through
                     <a href="https://www.instagram.com/_prince__pavan_7201">Instagram 📷</a></p>
                 </div>
             </div>
         </section>
-        <section class="skill-section">
+        <section class="skill-section" id="skills">
             <div class="skill-heading">
                 <div class="line"></div>
                 <h1>SKILLS</h1>
@@ -108,8 +107,8 @@
                 </div>
             </div>
         </section>
-        <section class="project-section">
-            <div class="project-heading">
+        <section class="project-section" >
+            <div class="project-heading" id="projects">
                 <div class="line"></div>
                 <h1>PROJECTS</h1>
                 <div class="line"></div>
@@ -162,9 +161,9 @@
                 </div>
             </div>
         </section>
-        <section class="contact-section">
+        <section class="contact-section" >
             <div class="contact-heading">
-                <div class="line"></div>
+                <div class="line" id="contact"></div>
                 <h1>CONTACT</h1>
                 <div class="line"></div>
             </div>
@@ -214,11 +213,11 @@
                     <div class="social-profiles">
                         <div class="github">
                             <img src="./assets/github.svg" alt="">
-                            <a href="https://github.com/your-username">Github 🐱</a>
+                            <a href="https://github.com/Pavan7201">Github 🐱</a>
                         </div>
                         <div class="linkedin">
                             <img src="./assets/linkedin animate.svg" alt="">
-                            <a href="https://www.linkedin.com/in/your-profile">LinkedIn 📝</a>
+                            <a href="https://www.linkedin.com/in/pavan-kumar-sahu-6554381a2">LinkedIn 📝</a>
                         </div>
                     </div>
                 </div>
@@ -227,11 +226,14 @@
     </main>
     <footer>
         <div class="copy-rights">
-            <p>&copy;2024 All rights reserved.</p>
-            <span>BACK TO TOP</span>
+                <p>&copy;2024 All rights reserved.</p>
+            <div class="back-to-top">
+                <span>  BACK TO TOP</span>
+                <img src="./assets/back-to-top-bounce.svg" alt="back to top arrow" onclick="scrollToContent()"/>
+            </div>
         </div>
     </footer>
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
