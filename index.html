@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="water-drop" id="drop">
-            <img src="./assets/Zenitsu.png" alt="Zenitsu image">
+            <img src="./assets/Zenitsu.png" alt="Zenitsu image" loading="lazy">
         </div>
     </section>
     
@@ -188,18 +188,19 @@
                         <span>Have a question or want to work together?</span>
                         <p>I'm always open to work on new projects and ideas. Let's make something awesome together!</p>
                         <div class="contact-inner-container">
-                            <form class="form-grid" action="">
+                            <form class="form-grid" action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value="0ed20262-c525-47c3-9276-cfd54eb2baa7">
                                 <div class="form-group col-span-2">
-                                    <input id="name" placeholder="Name" type="text" class="form-input">
+                                    <input name="first_name" placeholder="Name" type="text" class="form-input">
                                     <label for="name" class="form-label">Your Name</label>
                                 </div>
                                 <div class="form-group col-span-2">
-                                    <input id="email" placeholder="Email" type="email" class="form-input">
+                                    <input name="mail" placeholder="Email" type="email" class="form-input">
                                     <label for="email" class="form-label">Your Email</label>
                                 </div>
                                 <div class="form-group col-span-4">
-                                    <input id="subject" placeholder="Subject" type="text" class="form-input">
-                                    <label for="subject" class="form-label">Subject</label>
+                                    <input name="message" placeholder="Subject" type="text" class="form-input">
+                                    <label for="message" class="form-label">Subject</label>
                                 </div>
                                 <button class="submit-button" type="submit">Send Message</button>
                             </form>        
