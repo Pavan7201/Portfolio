@@ -7,7 +7,7 @@ const headerElement = document.querySelector('header');
 const scrollApply = 600;
 const scrollRemove = 1600;
 const scrollApplyAgain = 2500;
-const scrollRemoveAgain = 7700;
+const scrollRemoveAgain = 8400;
 
 document.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY || window.pageYOffset;
